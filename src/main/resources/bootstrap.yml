@@ -1,0 +1,24 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: hacconfig
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: true
+        git:
+          timeout: 0
+          uri: https://github.com/ameenmohamed/hacconfig.git
+          username: ameenmohamed
+          password: '{cipher}eced513428e9546dee56629a2dd65c7a031c3e83f61bfc73a6ec77d081ac324e' 
+          #git@github.com:ameenmohamed/hacconfig.git           
+          clone-on-start: true
+management:
+  context_path: /cfgadmin
+#  
+security:
+  user:
+    name: cfgclient
+    password: '{cipher}a14f5501de453c6624301f9e2ef56f087d5ac73099823b46a2258baa4e33da89'  
